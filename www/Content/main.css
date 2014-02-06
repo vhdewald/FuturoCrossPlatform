@@ -1,0 +1,414 @@
+﻿.full {
+    height: 100%;
+    overflow: hidden;
+    /*background: @yellow;*/
+}
+
+html,
+body {
+    height: 100%;
+    overflow: hidden;
+    /*background: @yellow;*/
+}
+
+body {
+    background-color: #e2e2e2;
+    color: #262626;
+}
+
+.no-margins {
+    margin: 0px;
+}
+
+.splash {
+    height: 100%;
+    background-color: #fccd01;
+    vertical-align: middle;
+}
+
+.splash img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.left-col {
+    position: fixed;
+    height: 100%;
+    overflow: hidden;
+    /*background: @yellow;*/
+    background-color: #fccd01;
+}
+
+.left-col img {
+    width: 180px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.left-col .fb-container {
+    position: relative;
+    top: 10px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.left-col .fb-container #fbInLeft {
+    position: relative;
+    top: 0;
+    bottom: 0;
+}
+
+.left-col #futuroInLeft {
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.right-col {
+    position: absolute;
+    height: 100%;
+    overflow: hidden;
+    /*background: @yellow;*/
+    padding: 0;
+    overflow: auto;
+}
+
+.base-button {
+    position: absolute;
+    bottom: 16px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.base-button button {
+    width: 125px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 14px;
+}
+
+.base-button-2 {
+    position: absolute;
+    bottom: 16px;
+    left: 0;
+    right: 0;
+    margin-bottom: -55px;
+    /*margin: auto;*/
+}
+
+.base-button-2 button {
+    width: 125px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.main {
+    position: absolute;
+    width: 680px;
+    height: 640px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.sports-container {
+    position: absolute;
+    top: 0;
+    width: 256px;
+    margin-left: 16px;
+    margin-top: 16px;
+}
+
+.square {
+    float: left;
+    margin-bottom: 12px;
+    background-color: #ebebeb;
+    border: 1px solid #262626;
+    border-color: #B4B6B5;
+    /*#262626;*/
+    width: 90px;
+    height: 90px;
+    cursor: pointer;
+    -ms-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.square:nth-child(even) {
+    margin-left: 16px;
+}
+
+.square:nth-last-child(1),
+.square:nth-last-child(0) {
+    margin-bottom: 0px;
+}
+
+.square .inner {
+    padding: 5px 15px 0 15px;
+}
+
+.square .inner img {
+    height: 60px;
+    width: 60px;
+}
+
+.square p {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.btn {
+    background-color: #f3f3f3;
+    text-align: center;
+    border-radius: 5px;
+    border-color: #c3c3c3;
+}
+
+.btn-on-banner {
+    background-color: #fddd4e;
+    border-color: #e4ba06;
+    border-width: thin;
+}
+
+.btn-width {
+    width: 125px;
+}
+
+#liveMore {
+    position: absolute;
+    margin-top: 16px;
+    font-size: 14px;
+    width: 335px;
+    right: 26px;
+}
+
+.man-container {
+    width: 335px;
+    height: 560px;
+    position: absolute;
+    bottom: 0;
+    top: 200px;
+    right: 90px;
+    margin: auto;
+}
+
+.man-container-2 {
+    width: 335px;
+    height: 560px;
+    position: absolute;
+    /*bottom: 1;*/
+    left: 30px;
+    margin: auto;
+}
+
+.man-image {
+    height: 560px;
+    position: absolute;
+}
+
+.product-title {
+    color: #024b97;
+}
+
+.support {
+    color: #c11d2b;
+}
+
+.back-container {
+    margin-left: 16px;
+}
+
+.region-container {
+    display: table;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    margin: 0 auto;
+    height: 100%;
+    /*width: 120px;*/
+}
+
+.region-container button {
+    width: 125px;
+    height: 65px;
+}
+
+.video-container {
+    height: 19em;
+}
+
+.carousel-container {
+    width: 100%;
+    margin-top: 156px;
+    padding: 16px;
+}
+
+.symptom-container {
+    position: absolute;
+    width: 480px;
+    /*height: 75px;*/
+    left: 120px;
+    margin-top: 9em;
+}
+
+.symptom-container .symptom {
+    width: 220px;
+    height: 75px;
+    float: left;
+    /*margin-bottom: 16px;*/
+    margin-top: 15px;
+}
+
+.symptom-container .symptom:nth-child(even) {
+    margin-left: 16px;
+}
+
+.symptom-container .symptom .btn {
+    width: 100%;
+    height: 100%;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.red-circle {
+    position: absolute;
+    width: 60px;
+}
+
+.highlight {
+    border: 1px solid #c3c3c3;
+    background-color: #f7f7f7;
+    -ms-border-radius: 4px;
+    border-radius: 4px;
+    padding: 16px;
+}
+
+.main-image {
+    position: absolute;
+    float: left;
+}
+
+.product-inner h3 {
+    margin-top: 0;
+    font-size: 20px;
+}
+
+.product-inner h4 {
+    margin-bottom: 2px;
+}
+
+.product-inner .sizes {
+    padding: 8px;
+    background-color: #f3f3f3;
+    border: 1px solid #cccccc;
+    -ms-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.product-inner .sizes p {
+    font-size: 12px;
+}
+
+.howto-container {
+    padding: 15px;
+}
+
+.howto-container .col-sm-3 {
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.howto-container .col-sm-3:nth-child(1) {
+    padding-left: 0;
+}
+
+.howto-container .col-sm-3:nth-child(4) {
+    padding-right: 0;
+}
+
+.list-header-container {
+    position: absolute;
+    width: 100%;
+    margin-top: -23px;
+    /*margin-left: 20em;*/
+}
+
+.list-header-container h5 {
+    text-align: center;
+    font-weight: 100;
+    margin-top: -5px;
+}
+
+.list-header-container h4 {
+    text-align: center;
+    font-weight: 100;
+}
+
+.related-container {
+    height: 146px;
+}
+
+.btn-xlg {
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.33;
+    border-radius: 6px;
+    width: 130px;
+}
+
+.btn-xxlg {
+    padding: 10px 16px;
+    font-size: 14px;
+    line-height: 1.33;
+    border-radius: 6px;
+    height: 45px;
+    width: 190px;
+}
+
+.btn-block-narrow {
+    display: block;
+    width: 150px;
+    height: 90px;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.animation-container {
+    width: 335px;
+    height: 188px;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    right: 16px;
+    margin: auto;
+}
+
+.container {
+    width: auto;
+}
+
+.arrow {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+}

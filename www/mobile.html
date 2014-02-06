@@ -1,0 +1,541 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" manifest="appcache.manifest">
+<head>
+    <title>Futuro striker</title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/fontawesome/font-awesome.min.css" rel="stylesheet" />
+    <link href="Content/mobile.css" rel="stylesheet" />
+    <link href="Content/rateit.css" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="/images/icon_small.png" />
+    <link rel="apple-touch-icon" href="/images/icon_small.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="/images/icon_large.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="application-name" content="Futuro Striker" />
+</head>
+<body>
+    <div class="splash" data-bind="visible: splashOn">
+        <img src="images/futuro_logo.png" alt="Futuro logo" />
+    </div>
+    <div class="full" data-bind="visible: splashOn() === false">
+        <div class="row">
+            <div class="main-container" style="margin:3em;">
+                <!-- Home -->
+                <div data-bind="if: pageName() == 'Home'" style="background: #fccd01;">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <img src="images/futuro_logo.png" data-bind="click: pageHome" alt="Futuro logo" id="futuroInLeft" class="img-responsive" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <p style="white-space: normal; text-align: center;">
+                            Find the best support for your pain points and get more out of your everyday life or in your favorite sport
+                        </p>
+                    </div>
+                    <table class="table-responsive" style="border:0;">
+                        <tr>
+                            <td align="center">
+                                <button class="btn btn-on-banner" data-bind="click: $root.pageBody" style="height: 100px; width: 110px; font-weight:600;">BODY PART</button>
+                            </td>
+                            <td align="center">
+                                or
+                            </td>
+                            <td align="center">
+                                <button class="btn btn-on-banner" data-bind="click: $root.pageSport" style="height: 100px; width: 110px; font-weight: 600;">SPORT</button>
+                            </td>
+                        </tr>
+                    </table>
+                    <table class="table-responsive" style="border:0;">
+                        <tr>
+                            <td align="center"><button class="btn btn-on-banner" data-bind="click: $root.pageRice">R.I.C.E Therapy</button></td>
+                        </tr>
+                        <tr>
+                            <td align="center">
+                                <p style="white-space: normal;-ms-word-wrap: break-word;word-wrap: break-word">Join our Live More community like our page for prizes and rewards</p>
+                                <img src="" alt="" /><img src="images/facebook.png" alt="Futuro logo" id="fbInLeft" class="img-responsive" style="width:10em;" />
+                                <!--<iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FFuturoMiddleEast&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=21&amp;appId=317047515036987" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:21px;" allowtransparency="true"></iframe>-->
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="base-button" style="margin-bottom: 1px;margin-right: 1px;">
+                        <img class="pull-right" src="images/m3_logo.png" style="width:10%" />
+                    </div>
+                </div>
+
+                <!-- Body Part-->
+                <div data-bind="visible: pageName() == 'BodyPart'">
+                    <table class="table-responsive" style="border: none;">
+                        <tr>
+                            <td data-bind="click: pageHome" style="text-align: center;">
+                                <i class="fa fa-home"></i><br>
+                                HOME
+                            </td>
+                            <td class="center-block">
+                                <img src="images/futuro_logo.png" data-bind="click: pageHome" alt="Futuro logo" id="futuroInLeft" class="img-responsive" />
+                            </td>
+                            <td data-bind="click: pageHome" style="text-align: center;">
+                                <i class="fa fa-undo"></i><br>BACK
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p style="white-space:normal;text-align:center;">
+                                to find the best support for your pain points and get more out of your everyday life or in your favorite sport
+                            </p>
+                        </div>
+                    </div>
+                    <div style="width:214px;margin:0 auto;">
+                        <img class="man-image" src="images/man.png" alt="running man" style="height: 337px;" />
+                        <div style="position: absolute">
+                            <!-- ko foreach:$root.regions-->
+                            <!-- ko ifnot:isArchived -->
+                            <img data-bind="style: {left: x, top: y}, click: $root.selectRegion" src="images/red_cricle.png" alt="red circle" class="red-circle" style="width:30px;" />
+                            <img data-bind="style: {left: x, top: y}, visible: isSelecting" src="images/yellow_cricle.png" alt="red circle" class="red-circle" style="width:30px;" />
+                            <!-- /ko-->
+                            <!-- /ko-->
+                        </div>
+                    </div>
+                    <div class="base-button" style="margin-bottom: 1px;margin-right: 1px;">
+                        <img class="pull-right" src="images/m3_logo.png" style="width:10%" />
+                    </div>
+                </div>
+
+                <!-- Sports -->
+                <div data-bind="visible: pageName() == 'pageSport'">
+                    <table class="table-responsive" style="border: none;">
+                        <tr>
+                            <td data-bind="click: pageHome" style="text-align: center;">
+                                <i class="fa fa-home"></i><br>
+                                HOME
+                            </td>
+                            <td class="center-block">
+                                <img src="images/futuro_logo.png" data-bind="click: pageHome" alt="Futuro logo" id="futuroInLeft" class="img-responsive" />
+                            </td>
+                            <td data-bind="click: pageHome" style="text-align: center;">
+                                <i class="fa fa-undo"></i><br>BACK
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p style="white-space: normal;text-align:center;">
+                                to find the best support for your pain points and get more out of your everyday life or in your favorite sport
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!-- ko foreach:sports -->
+                        <!-- ko if:videoFileName -->
+                        <div class="square" data-bind="click: $root.selectSport">
+                            <div class="inner">
+                                <img data-bind="attr: {src: 'images/sport/' + name + '.png'}" alt="Futuro logo" />
+                            </div>
+                            <p data-bind="text: name"></p>
+                        </div>
+                        <!-- /ko -->
+                        <!-- /ko-->
+                    </div>
+                    <div class=" base-button" style="margin-bottom: 1px;margin-right: 1px;">
+                        <img class="pull-right" src="images/m3_logo.png" style="width:10%" />
+                    </div>
+                </div>
+
+                <!-- Regions -->
+                <div data-bind="visible: pageName() == 'Regions'">
+                    <table class="table-responsive" style="border: none;">
+                        <tr>
+                            <td data-bind="click: pageHome" style="text-align: center;">
+                                <i class="fa fa-home"></i><br>
+                                HOME
+                            </td>
+                            <td class="center-block">
+                                <img src="images/futuro_logo.png" data-bind="click: pageHome" alt="Futuro logo" id="futuroInLeft" class="img-responsive" />
+                            </td>
+                            <td data-bind="click: pageHome" style="text-align: center;">
+                                <i class="fa fa-undo"></i><br>BACK
+                            </td>
+                        </tr>
+                    </table>
+                    <div data-bind="with: selectedSport">
+                        <div class="row">
+                            <div class="square" style="margin-left:10px;margin-top:10px;">
+                                <div class="inner">
+                                    <img data-bind="attr: {src: 'images/sport/' + name + '.png'}" alt="Futuro logo" />
+                                </div>
+                                <p data-bind="text: name"></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <!-- ko foreach: sportRegions-->
+                                <!-- ko ifnot:isArchived -->
+                                <button data-bind="text: name, click: $root.selectRegion" class="btn btn-default btn-block"></button>
+                                <!-- /ko-->
+                                <!-- /ko-->
+                            </div>
+                        </div>
+                        <div class="row" style="margin-top:10px;">
+                            <div>
+                                <video autoplay="autoplay" controls="controls" class="video-container">
+                                    <source data-bind="attr:{ src: 'http://www.strikemedia.co.za/downloads/'+videoFileName }" type="video/mp4" />
+                                </video>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="back-container">
+                                <button data-bind="click: $root.pageName('pageSport')" class="btn btn-default pull-right">Back</button>
+                                <button data-bind="click: $root.pageHome" class="btn btn-default">Home</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Symptoms -->
+                <div data-bind="visible: pageName() == 'Symptoms'">
+                    <table class="table-responsive" style="border: none;">
+                        <tr>
+                            <td data-bind="click: pageHome" style="text-align: center;">
+                                <i class="fa fa-home"></i><br>
+                                HOME
+                            </td>
+                            <td class="center-block">
+                                <img src="images/futuro_logo.png" data-bind="click: pageHome" alt="Futuro logo" id="futuroInLeft" class="img-responsive" />
+                            </td>
+                            <td data-bind="click: clearSymptoms" style="text-align: center;">
+                                <i class="fa fa-undo"></i><br>BACK
+                            </td>
+                        </tr>
+                    </table>
+                    <div data-bind="with: selectedSport">
+                        <div class="square">
+                            <div class="inner">
+                                <img data-bind="attr: {src: 'images/sport/'+ name+ '.png'}" alt="" />
+                            </div>
+                            <p data-bind="text: name"></p>
+                        </div>
+                    </div>
+                    <div data-bind="with: selectedRegion">
+                        <p data-bind="text: name" style="text-align:center"></p>
+                    </div>
+                    <div>
+                        <div class="col-md-5">
+                            <!-- ko foreach:$root.symptoms-->
+                            <div class="symptom">
+                                <button class="btn btn-block" data-bind="text: name, click: $root.selectSymptom" style="margin-bottom:10px;"></button>
+                            </div>
+                            <!-- /ko -->
+                        </div>
+                    </div>
+                    <div>
+                        <div class="back-container">
+                            <button data-bind="click: clearSymptoms" class="btn btn-default pull-right">Back</button>
+                            <button data-bind="click: pageHome" class="btn btn-default">Home</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ProductList -->
+                <div data-bind="visible: pageName() == 'ProductList'">
+                    <table class="table-responsive" style="border: none;">
+                        <tr>
+                            <td data-bind="click: pageHome" style="text-align: center;">
+                                <i class="fa fa-home"></i><br>
+                                HOME
+                            </td>
+                            <td class="center-block">
+                                <img src="images/futuro_logo.png" data-bind="click: pageHome" alt="Futuro logo" id="futuroInLeft" class="img-responsive" />
+                            </td>
+                            <td data-bind="click: $root.clearProductList" style="text-align: center;">
+                                <i class="fa fa-undo"></i><br>BACK
+                            </td>
+                        </tr>
+                    </table>
+                    <div data-bind="with: selectedRegion" style="text-align:center;">
+                        <h4><span data-bind="text: name"></span></h4>
+                        <!-- ko with:$root.selectedSymptom -->
+                        <h5><span data-bind="text: name"></span></h5>
+                        <!-- /ko -->
+                    </div>
+                    <div class="carousel-container">
+                        <div id="carousel-example-generic" class="carousel" data-pause="false">
+                            <!-- Indicators -->
+                            <ol class="carousel-indicators">
+                                <!-- ko foreach:$root.products-->
+                                <li data-target="#carousel-example-generic" data-bind="attr:{ 'data-slide-to': $index }, css:{ active: $index() == 0 }"></li>
+                                <!-- /ko-->
+                            </ol>
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner">
+                                <!-- ko foreach:$root.products-->
+                                <div class="item" data-bind="css:{ active: $index() == 0 }">
+                                    <div>
+                                        <div class="highlight" style="height: 38em">
+                                            <h4 data-bind="click: $root.selectProduct, text: name" class="product-title" style="padding-left:20px;"></h4>
+                                            <div class="row">
+                                                <div class="col-sm-5">
+                                                    <img class="img-responsive" data-bind="click: $root.selectProduct, attr: {src: 'images/products/thumbnail/' + imageFilename}" alt="product icon" />
+                                                </div>
+                                                <div class="col-sm-7">
+                                                    <p class="support" data-bind="text: support + ' ' + 'Support'"></p>
+                                                    <div>
+                                                        <!-- ko foreach:features -->
+                                                        <img data-bind="attr: { src: 'images/product info images/' + featureImageName } " alt="Feature" style="width: 18px; height:18px;" /> <label style="font-size: 14px;font-weight: 500" data-bind="text: name"></label><br />
+                                                        <!-- /ko-->
+                                                    </div>
+                                                    <br />
+                                                    <p>Rating:&nbsp;<span class="test" data-bind="attr: {'data-rateit-value': rating/2}"></span></p>
+                                                    <input type="button" name="name" value="View Product" class="btn btn-xxlg" data-bind="click: $root.selectProduct" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /ko-->
+                                <br />
+                            </div>
+                            <!-- Controls -->
+                            <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev" style="background-image: none; margin-top: 28em;">
+                                <img src="images/arrow_left.png" alt="left arrow" class="arrow" />
+                            </a>
+                            <a class="right carousel-control" href="#carousel-example-generic" data-slide="next" style="background-image: none; margin-top: 28em;">
+                                <img src="images/arrow_right.png" alt="right arrow" class="arrow" />
+                            </a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="back-container" style="margin-top:40px;">
+                            <button data-bind="click: clearProductList" class="btn btn-default pull-right">Back</button>
+                            <button data-bind="click: pageHome" class="btn btn-default">Home</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product page -->
+                <div data-bind="visible: pageName() == 'Product'">
+                    <table class="table-responsive" style="border: none;">
+                        <tr>
+                            <td data-bind="click: pageHome" style="text-align: center;">
+                                <i class="fa fa-home"></i><br>
+                                HOME
+                            </td>
+                            <td class="center-block">
+                                <img src="images/futuro_logo.png" data-bind="click: pageHome" alt="Futuro logo" id="futuroInLeft" class="img-responsive" />
+                            </td>
+                            <td data-bind="click: $root.clearProduct" style="text-align: center;">
+                                <i class="fa fa-undo"></i><br>BACK
+                            </td>
+                        </tr>
+                    </table>
+                    <div data-bind="with: selectedProduct">
+                        <div class="highlight">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <img data-bind="attr: { src: 'images/products/thumbnail/' + imageFilename }, click: $root.showImage" alt="Main product" class="img-responsive" />
+                                    <p>Rating:&nbsp;<span class="test2" data-bind="attr: {'data-rateit-value': rating/2}"></span></p>
+                                    <p class="support" data-bind="text: support + ' ' + 'Support'"></p>
+                                    <div class="features-container">
+                                        <!-- ko foreach:features -->
+                                        <img data-bind="attr: { src: 'images/product info images/' + featureImageName } " alt="Feature" style="width: 18px; height:18px;" />
+                                        <label style="font-size: 12px;font-weight: 100" data-bind="text: name"></label><br />
+                                        <!-- /ko-->
+                                    </div>
+                                    <button class="btn btn-default btn-on-banner" id="video1" data-bind="visible: $data.videoUrl, click: $root.showVideo" style="width:100%">View Video</button>
+                                    <button class="btn btn-default btn-on-banner" id="video2" data-bind="visible: $data.videoUrl2, click: $root.showVideo" style="width:100%">View Video</button>
+                                </div>
+                                <div class="col-sm-8">
+                                    <div class="product-inner">
+                                        <h3 data-bind="text: name" class="product-title"></h3>
+                                        <h4>Special Features</h4>
+                                        <p data-bind="text: specialfeatures"></p>
+                                        <h4>Features and Benefits</h4>
+                                        <p data-bind="text: description"></p>
+                                        <h4>Use for</h4>
+                                        <p data-bind="text: useFor"></p>
+                                        <!-- ko if:howToImages().length > 0 -->
+                                        <div class="howto-container row">
+                                            <!-- ko foreach:howToImages -->
+                                            <div class="col-sm-3">
+                                                <img data-bind="attr: {src: 'images/howto/'+ fileName}" class="img-responsive" style="height:65px;" alt="How to image" />
+                                            </div>
+                                            <!-- /ko-->
+                                        </div>
+                                        <!-- /ko-->
+                                        <div class="sizes">
+                                            <strong>Sizes:</strong>
+                                            <p data-bind="text: sizes"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+
+                        <!-- ko if:$root.selectedSymptom().relatedProds().length > 0 -->
+
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <h4 style="font-size: 15px; font-weight: bold;">Related Products</h4>
+                                <!--<button class="btn btn-block btn-width" data-bind="click: $root.clearProduct">Back</button>
+                                <button class="btn btn-block btn-width" data-bind="click: $root.pageHome">Home</button>-->
+                            </div>
+                            <!-- ko foreach:$root.selectedSymptom().relatedProds-->
+                            <div class="col-sm-5">
+                                <div class="highlight related-container">
+                                    <div class="row">
+                                        <!--<div class="col-sm-4">
+                                            <img data-bind="attr: { src: 'images/products/thumbnail/' + imageFilename } " alt="Related product" class="img-responsive" />
+                                        </div>-->
+                                        <div class="col-sm-8">
+                                            <div class="product-inner">
+                                                <h5 data-bind="text: name" class="product-title"></h5>
+                                                <!--<p class="support" data-bind="text: support"></p>-->
+                                                <input type="button" name="name" value="View Product" class="btn btn-default" data-bind="click: $root.selectProduct" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /ko -->
+                        </div>
+                        <!-- /ko -->
+                        <!-- ko if:$root.selectedSymptom().relatedProds().length == 0 -->
+                        <!-- /ko -->
+                    </div>
+                    <div>
+                        <div class="back-container">
+                            <button data-bind="click: $root.clearProduct" class="btn btn-default pull-right">Back</button>
+                            <button data-bind="click: $root.pageHome" class="btn btn-default">Home</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product image page -->
+                <div data-bind="visible: pageName() == 'ProductImage'">
+                    <div data-bind="with: selectedProduct">
+                        <div class="container highlight">
+                            <h3 data-bind="text: name" class="product-title"></h3>
+                            <div class="row">
+                                <div class="col-sm-8 col-sm-offset-2">
+                                    <img data-bind="attr: { src: 'images/products/large/' + imageFilename }" alt="Main product" class="img-responsive" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="base-button-2" style="position: inherit;">
+                            <div class="pull-left back-container">
+                                <button data-bind="click: $root.clearImage" class="btn btn-lg">Back</button>
+                                <button data-bind="click: $root.pageHome" class="btn btn-lg">Home</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Region video page -->
+                <div data-bind="if: pageName() == 'RegionVideo'">
+                    <table class="table-responsive" style="border: none;">
+                        <tr>
+                            <td data-bind="click: pageHome" style="text-align: center;">
+                                <i class="fa fa-home"></i><br>
+                                HOME
+                            </td>
+                            <td class="center-block">
+                                <img src="images/futuro_logo.png" data-bind="click: pageHome" alt="Futuro logo" id="futuroInLeft" class="img-responsive" />
+                            </td>
+                            <td data-bind="click: $root.clearProduct" style="text-align: center;">
+                                <i class="fa fa-undo"></i><br>BACK
+                            </td>
+                        </tr>
+                    </table>
+                    <div data-bind="with: selectedProduct">
+                        <div class="container highlight">
+                            <h3 data-bind="text: name"></h3>
+                            <div class="row">
+                                <div class="col-sm-offset-2" style="padding: 10px;">
+                                    <iframe class="video-container" allowfullscreen data-bind="attr:{src: $parent.videoToPlay() + autoplay}"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rice -->
+                <div class="row" data-bind="if: pageName() == 'Rice'">
+                    <table class="table-responsive" style="border: none;">
+                        <tr>
+                            <td data-bind="click: pageHome" style="text-align: center;">
+                                <i class="fa fa-home"></i><br>
+                                HOME
+                            </td>
+                            <td class="center-block">
+                                <img src="images/futuro_logo.png" data-bind="click: pageHome" alt="Futuro logo" id="futuroInLeft" class="img-responsive" />
+                            </td>
+                            <td data-bind="click: pageHome" style="text-align: center;">
+                                <i class="fa fa-undo"></i><br>BACK
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <h3>R.I.C.E. Therapy</h3>
+                            <span>The most common forms of sports injuries are sprains and strains of muscles and tendons. a basic treatment for these types of injuries is called R.I.C.E. Therapy</span>
+
+                            <h4 style="margin-bottom:1px;">Rest</h4>
+                            <p>Stop the activity immediately. Continued stress can increase the damage done to the tissue.</p>
+
+                            <h4 style="margin-bottom:1px;">Ice</h4>
+                            <p>Apply a Futuro Brand Cold Compress. Cold reduces the size of the blood vessels, thereby decreasing and bleeding, reducing swelling, and easing pain.</p>
+
+                            <h4 style="margin-bottom:1px;">Compression</h4>
+                            <p>Apply compression with a Futuro Brand Elastic Bandage. Compression helps to reduce swelling.</p>
+
+                            <h4 style="margin-bottom:1px;">Elevation</h4>
+                            <p>Elevate the injured limb above the level of the heart to help drain excess fluid from the area.</p>
+
+                            <div style="font-size: 20px; font-weight:100;font-style:normal">Hot vs. Cold</div>
+                            <div style="background-color:#ebebeb;border:1px solid #c3c3c3;height:30em;padding-top:10px;" class="row">
+                                <div class="col-sm-6">
+                                    <p style="color: #c11d2b;font-size:16px;font-weight:bold;">Heat Therapy</p>
+                                    <p>Heat Therapy is best for chronic pain and injuries without swelling. Heat relaxers tight muscles and stimulates blood flow.</p>
+                                    <ul style="line-height:25px">
+                                        <li>Muscle aches</li>
+                                        <li>Cramps</li>
+                                        <li>Arthritis</li>
+                                        <li>Tension</li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-6">
+                                    <p style="color: #024b97; font-size: 16px; font-weight: bold;">Cold Therapy</p>
+                                    <p>Cold therapy is best immediately after acute injuries or after activity with chronic injuries to reduce swelling and pain.</p>
+                                    <ul style="line-height:25px">
+                                        <li>Sprains/Strains</li>
+                                        <li>Bruises</li>
+                                        <li>Headaches</li>
+                                        <li>Toothaches</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4" style="padding:0;">
+                        <!-- ko foreach:videos -->
+                        <div>
+                            <iframe class="video-container" frameborder="0" allowfullscreen data-bind="attr:{src:$data}"></iframe><br />
+                        </div>
+                        <!-- /ko -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="Scripts/jquery-2.0.3.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/knockout-3.0.0.js"></script>
+    <script src="Scripts/jquery.rateit.min.js"></script>
+    <script src="Scripts/taffy-min.js"></script>
+    <script src="Scripts/offline.min.js"></script>
+    <script src="Scripts/app/appMobile.js"></script>
+</body>
+</html>
