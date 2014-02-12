@@ -37,6 +37,7 @@
 		30A0434814DC770100060A13 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 30A0434314DC770100060A13 /* Localizable.strings */; };
 		30A0434914DC770100060A13 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 30A0434614DC770100060A13 /* Localizable.strings */; };
 		30E5649213A7FCAF007403D8 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30E5649113A7FCAF007403D8 /* CoreMedia.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		4F1B949718AB68D800ACBDF1 /* libCordova.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F1B949618AB68BB00ACBDF1 /* libCordova.a */; };
 		5AA0E66D1729F45B000DC89A /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AA0E66C1729F45B000DC89A /* OpenAL.framework */; };
 		5AA0E66F1729F460000DC89A /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AA0E66E1729F460000DC89A /* ImageIO.framework */; };
 		5AEE5B35173C68D80009041E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AEE5B34173C68D80009041E /* CoreLocation.framework */; };
@@ -60,16 +61,15 @@
 		B9D626C9187BDEC600BBF133 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9D626B9187BDEC600BBF133 /* Icon@2x.png */; };
 		B9D626CA187BDEC600BBF133 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = B9D626BA187BDEC600BBF133 /* iTunesArtwork.png */; };
 		B9D626CB187BDEC600BBF133 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B9D626BB187BDEC600BBF133 /* iTunesArtwork@2x.png */; };
-		B9EDB2A11843C4420013A0DD /* libCordova.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B9B4BF801843C07200041BC8 /* libCordova.a */; };
 		B9F84C8D189EE742005B581F /* www in Resources */ = {isa = PBXBuildFile; fileRef = B9F84C8C189EE742005B581F /* www */; };
 		D4A0D8761607E02300AEF8BB /* Default-568h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */; };
 		F840E1F1165FE0F500CFE078 /* config.xml in Resources */ = {isa = PBXBuildFile; fileRef = F840E1F0165FE0F500CFE078 /* config.xml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		B9B4BF7F1843C07200041BC8 /* PBXContainerItemProxy */ = {
+		4F1B949518AB68BB00ACBDF1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = B9B4BF7B1843C07200041BC8 /* CordovaLib.xcodeproj */;
+			containerPortal = 4F1B949118AB68BB00ACBDF1 /* CordovaLib.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 68A32D7114102E1C006B237C;
 			remoteInfo = CordovaLib;
@@ -111,12 +111,12 @@
 		30A0434714DC770100060A13 /* se */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = se; path = Localizable.strings; sourceTree = "<group>"; };
 		30E5649113A7FCAF007403D8 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		32CA4F630368D1EE00C91783 /* __TESTING__-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "__TESTING__-Prefix.pch"; sourceTree = "<group>"; };
+		4F1B949118AB68BB00ACBDF1 /* CordovaLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CordovaLib.xcodeproj; path = ../FututoPhongap/platforms/ios/CordovaLib/CordovaLib.xcodeproj; sourceTree = "<group>"; };
 		5AA0E66C1729F45B000DC89A /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
 		5AA0E66E1729F460000DC89A /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		5AEE5B34173C68D80009041E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		5B1594DC16A7569C00FEF299 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		8D1107310486CEB800E47090 /* __TESTING__-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "__TESTING__-Info.plist"; path = "../__TESTING__-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
-		B9B4BF7B1843C07200041BC8 /* CordovaLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CordovaLib.xcodeproj; path = "../../../../Downloads/phonegap-2.9.1/lib/ios/CordovaLib/CordovaLib.xcodeproj"; sourceTree = "<group>"; };
 		B9C0EBAB184484C200D957D4 /* Default-Landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape.png"; sourceTree = "<group>"; };
 		B9C0EBAC184484C200D957D4 /* Default-Landscape@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape@2x.png"; sourceTree = "<group>"; };
 		B9C0EBB01844850200D957D4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = __TESTING__/Images.xcassets; sourceTree = SOURCE_ROOT; };
@@ -146,7 +146,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9EDB2A11843C4420013A0DD /* libCordova.a in Frameworks */,
+				4F1B949718AB68D800ACBDF1 /* libCordova.a in Frameworks */,
 				3060C7921818A57600EC681E /* CoreMotion.framework in Frameworks */,
 				301BF5BF109A6A2B0062928A /* CoreLocation.framework in Frameworks */,
 				5AA0E66F1729F460000DC89A /* ImageIO.framework in Frameworks */,
@@ -214,6 +214,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				4F1B949118AB68BB00ACBDF1 /* CordovaLib.xcodeproj */,
 				B9F84C8C189EE742005B581F /* www */,
 				F840E1F0165FE0F500CFE078 /* config.xml */,
 				080E96DDFE201D6D7F000001 /* Classes */,
@@ -222,7 +223,6 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
-				B9B4BF7B1843C07200041BC8 /* CordovaLib.xcodeproj */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
@@ -341,10 +341,10 @@
 			path = se.lproj;
 			sourceTree = "<group>";
 		};
-		B9B4BF7C1843C07200041BC8 /* Products */ = {
+		4F1B949218AB68BB00ACBDF1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B9B4BF801843C07200041BC8 /* libCordova.a */,
+				4F1B949618AB68BB00ACBDF1 /* libCordova.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -379,7 +379,7 @@
 				LastUpgradeCheck = 0460;
 				TargetAttributes = {
 					1D6058900D05DD3D006BFB54 = {
-						DevelopmentTeam = 9F26WSUZKT;
+						DevelopmentTeam = 9L9R893DES;
 					};
 				};
 			};
@@ -401,8 +401,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = B9B4BF7C1843C07200041BC8 /* Products */;
-					ProjectRef = B9B4BF7B1843C07200041BC8 /* CordovaLib.xcodeproj */;
+					ProductGroup = 4F1B949218AB68BB00ACBDF1 /* Products */;
+					ProjectRef = 4F1B949118AB68BB00ACBDF1 /* CordovaLib.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -413,11 +413,11 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		B9B4BF801843C07200041BC8 /* libCordova.a */ = {
+		4F1B949618AB68BB00ACBDF1 /* libCordova.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libCordova.a;
-			remoteRef = B9B4BF7F1843C07200041BC8 /* PBXContainerItemProxy */;
+			remoteRef = 4F1B949518AB68BB00ACBDF1 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -561,7 +561,7 @@
 					CoreMedia,
 					"-weak-lSystem",
 					"-force_load",
-					"\"$(BUILT_PRODUCTS_DIR)/libCordova.a\"",
+					"\"${BUILT_PRODUCTS_DIR}/libCordova.a\"",
 					"-ObjC",
 				);
 				PRODUCT_NAME = Futuro;
@@ -597,7 +597,7 @@
 					CoreMedia,
 					"-weak-lSystem",
 					"-force_load",
-					"\"$(BUILT_PRODUCTS_DIR)/libCordova.a\"",
+					"\"${BUILT_PRODUCTS_DIR}/libCordova.a\"",
 					"-ObjC",
 				);
 				PRODUCT_NAME = Futuro;

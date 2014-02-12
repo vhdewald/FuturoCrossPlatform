@@ -178,8 +178,9 @@
                         </div>
                         <div class="row" style="margin-top:10px;">
                             <div>
+                                <span data-bind="text: videoFileName"></span>
                                 <video autoplay="autoplay" controls="controls" class="video-container">
-                                    <source data-bind="attr:{ src: 'http://www.strikemedia.co.za/downloads/'+videoFileName }" type="video/mp4" />
+                                    <source data-bind="attr:{ src: videoFileName }" type="video/mp4" />
                                 </video>
                             </div>
                         </div>

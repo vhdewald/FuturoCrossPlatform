@@ -13,11 +13,6 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="application-name" content="Futuro Striker" />
-    <script>
-        var viewportWidth = $(window).width();
-        if (viewportWidth < 780)
-        window.location.href = 'mobile.html';
-        </script>
 </head>
 <body>
     <div class="splash" data-bind="visible: splashOn">
@@ -432,11 +427,7 @@
         </div>
     </div>
     <div id="fb-root"></div>
-    <script>
-        var viewportWidth = $(window).width();
-        if (viewportWidth < 780)
-            window.location.href = 'mobile.html';
-    </script>
+    
     <script src="Scripts/jquery-2.0.3.js"></script>
     <script src="Scripts/bootstrap.min.js"></script>
     <script src="Scripts/knockout-3.0.0.js"></script>
@@ -444,5 +435,10 @@
     <script src="Scripts/taffy-min.js"></script>
     <script src="Scripts/offline.min.js"></script>
     <script src="Scripts/app/app.js"></script>
+    <script>
+        var viewportWidth = $(window).width();
+        if (viewportWidth < 780)
+            window.location.href = 'mobile.html';
+    </script>
 </body>
 </html>
